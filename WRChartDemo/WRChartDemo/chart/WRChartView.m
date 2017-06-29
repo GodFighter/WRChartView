@@ -225,9 +225,11 @@
         CAShapeLayer *fillLayer = [CAShapeLayer layer];
         fillLayer.frame = self.layer.bounds;
         UIBezierPath *path = [self bezierPathOfStrokeLayer:chartConfig drawingChartPoints:drawingChartPoints];
-        [path addLineToPoint:CGPointMake([[drawingChartPoints lastObject] x],
+        WRChartPoint *firstPoint = [drawingChartPoints firstObject];
+        WRChartPoint *lastPoint = [drawingChartPoints firstObject];
+        [path addLineToPoint:CGPointMake(lastPoint.x,
                                          chartConfig.paddingTop + self.chartHeight)];
-        [path addLineToPoint:CGPointMake([[drawingChartPoints firstObject] x],
+        [path addLineToPoint:CGPointMake(firstPoint.x,
                                          chartConfig.paddingTop + self.chartHeight)];
         [path closePath];
         fillLayer.path = path.CGPath;
