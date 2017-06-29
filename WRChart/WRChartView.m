@@ -226,7 +226,7 @@
         fillLayer.frame = self.layer.bounds;
         UIBezierPath *path = [self bezierPathOfStrokeLayer:chartConfig drawingChartPoints:drawingChartPoints];
         WRChartPoint *lastPoint = drawingChartPoints.lastObject;
-        WRChartPoint *firstPoint = drawingChartPoints.firstPoint;
+        WRChartPoint *firstPoint = drawingChartPoints.firstObject;
         [path addLineToPoint:CGPointMake(lastPoint.x,
                                          chartConfig.paddingTop + self.chartHeight)];
         [path addLineToPoint:CGPointMake(firstPoint.x,
