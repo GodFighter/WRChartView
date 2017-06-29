@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "WRChartView"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "曲线视图1111111111."
 s.description  = "渐变曲线视图2222222233333."
 s.homepage     = "https://github.com/GodFighter/WRChartView.git"
